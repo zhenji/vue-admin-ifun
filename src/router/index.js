@@ -72,6 +72,23 @@ export const constantRouterMap = [
     ]
   },
 
+  {
+    path: '/charts',
+    component: Layout,
+    redirect: 'noredirect',
+    name: 'charts',
+    alwaysShow: true,
+    meta: { title: 'Charts', icon: 'chart'},
+    children: [
+      {
+        path: 'gante',
+        name: 'Gante',
+        component: () => import('@/views/gante/index'),
+        meta: { title: 'Gante', icon: 'table' }
+      }
+    ]
+  },
+
   { path: '*', redirect: '/404', hidden: true }
 ]
 
